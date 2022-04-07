@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "name": "Abdul Salam",
+            "email": "abdul@gmail.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 1,
+            "id": 15
+        },
+        {
+            "name": "Bob",
+            "email": "bob.maxwell@gmail.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 1,
+            "id": 16
+        },
+        {
+            "name": "Gordan",
+            "email": "gordan.freeman@yahoo.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 0,
+            "id": 18
+        },
+        {
+            "name": "John",
+            "email": "jsmith@yahoo.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 0,
+            "id": 30
+        }
+    ],
+    "files": [
+        {
+            "id": 336617005018,
+            "path": "/uploads/data-1649318191264-40952111.png",
+            "user": 15
+        }
+    ]
+}

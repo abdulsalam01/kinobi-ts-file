@@ -6,7 +6,6 @@ import fileRouter from './file-router';
 const baseRouter = Router();
 
 // Setup routers
-
 baseRouter.use('/users', userRouter);
 baseRouter.use('/files', fileRouter);
 

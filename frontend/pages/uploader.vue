@@ -22,14 +22,14 @@ export default {
 
   methods: {
     async getUser() {
-      const user = http.get(`/api/users`);
+      const user = await http.get(`/api/users`);
       this.user = user.data.randomUser;
     },
 
     async getFile(mail) {
       if (!mail) return false;
 
-      const files = http.get(`/api/files/${mail}`);
+      const files = await http.get(`/api/files/${mail}`);
       this.data = files.data.file;
     }
   }

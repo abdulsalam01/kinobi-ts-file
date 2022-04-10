@@ -48,11 +48,6 @@ app.set('views', viewsDir);
 const staticDir = path.join(__dirname, 'public');
 app.use(express.static(staticDir));
 
-// Serve index.html file
-app.get('*', (_: Request, res: Response) => {
-    res.sendFile('index.html', {root: viewsDir});
-});
-
 /***********************************************************************************
  *                         API routes and error handling
  **********************************************************************************/
@@ -62,6 +57,11 @@ app.use((req: Request, res: Response, next: any) => {
 
 // Add api router
 app.use('/api', apiRouter);
+
+// Serve index.html file
+app.get('*', (_: Request, res: Response) => {
+    res.sendFile('index.html', {root: viewsDir});
+});
 
 // Error handling
 app.use((err: Error | CustomError, _: Request, res: Response, __: NextFunction) => {

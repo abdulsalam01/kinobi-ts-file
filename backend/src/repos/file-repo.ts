@@ -14,7 +14,7 @@ async function getOne(email: string): Promise<IFile[] | null> {
     const user = await userRepo.getOne(email);
     const files = [];
 
-    for (const file of db.files) {
+    for (const file of db.files.slice(0, 10)) {
         if (file.user === user?.id) {
             files.push({ ...file, user });
         }

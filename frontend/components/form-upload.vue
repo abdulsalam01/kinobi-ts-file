@@ -17,12 +17,17 @@
       :items="data"
       :items-per-page="5"
       class="elevation-1 mt-3"
-    ></v-data-table>
+    >
+      <template v-slot:item.display="{ item }">
+        <v-img :src="getFile(item.path)" height="200px" width="200px"></v-img>
+      </template>
+    </v-data-table>
   </v-container>
 </template>
 
 <script>
 export default {
+  props: ['data'],
   data () {
     return {
         loader: null,
@@ -38,7 +43,6 @@ export default {
           { text: 'Path', value: 'path' },
           { text: 'Display', value: 'display' },
         ],
-        data: [],
       }
     },
     watch: {
@@ -50,5 +54,11 @@ export default {
         this.loader = null
       },
     },
+
+    methods: {
+      getFile(path) {
+        return process.env.BASE_API + "/" + path;
+      }
+    }
   }
 </script>

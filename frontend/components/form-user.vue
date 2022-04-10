@@ -4,11 +4,11 @@
       <h2 class="font-weight-medium">Upload your file!</h2>
       <v-row>
         <div class="d-flex col-8">
-          <v-text-field v-model="email" label="Email" disabled></v-text-field>
+          <v-text-field v-model="user.email" label="Email" disabled></v-text-field>
         </div>
 
         <div class="d-flex col-4">
-          <v-btn depressed elevation="7" large raised> Get User!</v-btn>
+          <v-btn depressed elevation="7" large raised @click="$emit('get')"> Get User!</v-btn>
 
           <v-btn
             class="ml-3"
@@ -17,6 +17,7 @@
             elevation="7"
             large
             raised
+            @click="$emit('use')"
           >
             Use it!
           </v-btn>
@@ -28,6 +29,7 @@
 
 <script>
 export default {
+  props: ['user', 'get', 'set'],
   data () {
     return {
       valid: true,

@@ -19,6 +19,11 @@ $ npm run start
 $ npm run generate
 ```
 
+Running at:
+```
+localhost:4000
+```
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.

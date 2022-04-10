@@ -5,7 +5,7 @@
       :disabled="loading"
       color="blue-grey"
       class="ma-2 white--text"
-      @click="loader = 'loading'"
+      @click="$emit('upload')"
     >
       Upload
       <v-icon right dark> mdi-cloud-upload </v-icon>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  props: ['data'],
+  props: ['data', 'upload'],
   data () {
     return {
         loader: null,
@@ -39,7 +39,7 @@ export default {
             sortable: false,
             value: 'no',
           },
-          { text: 'Name', value: 'name' },
+          { text: 'Name', value: 'user.name' },
           { text: 'Path', value: 'path' },
           { text: 'Display', value: 'display' },
         ],
